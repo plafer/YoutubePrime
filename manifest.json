@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "Light Player",
+    "version": "0.1",
+    "minimum_chrome_version": "23",
+    "description": "Removing the friction of using Youtube as a music player.",
+    "author": "Philippe Laferriere",
+    "browser_action": {
+        "default_title": "Light Player",
+        "default_icon": "icon.png",
+        "default_popup": "browser_action.html"
+    },
+    "commands": {
+        "play-pause": {
+            "suggested_key": {
+                "default": "Ctrl+Right"
+            },
+            "description": "Play and pause the player."
+        },
+        "player-search": {
+            "suggested_key": {
+                "default": "Ctrl+Left"
+            },
+            "description": "Switch to the player and select the search bar."
+        },
+        "tab-switch": {
+            "suggested_key": {
+                "default": "Ctrl+Down"
+            },
+            "description": "Switch between the player and last visited tab."
+        }
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "https://*.youtube.com/watch*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/watch*"],
+            "js": ["youtube_script.js"]
+        }
+    ]
+}
