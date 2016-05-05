@@ -13,19 +13,19 @@
     "commands": {
         "play-pause": {
             "suggested_key": {
-                "default": "Ctrl+Right"
+                "default": "Alt+P"
             },
             "description": "Play and pause the player."
         },
         "player-search": {
             "suggested_key": {
-                "default": "Ctrl+Left"
+                "default": "Alt+N"
             },
             "description": "Switch to the player and select the search bar."
         },
         "tab-switch": {
             "suggested_key": {
-                "default": "Ctrl+Down"
+                "default": "Alt+S"
             },
             "description": "Switch between the player and last visited tab."
         }
