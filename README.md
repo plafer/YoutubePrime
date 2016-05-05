@@ -1,10 +1,7 @@
-# Flow
-1- On start, create a pinned tab and default to http://www.youtube.com
-2- Shortcuts available:
-	- Play/pause
-	- Increment/decrement sound
-	- switch to tab and select search box
+# Features
++ ALT + P: Play/pause video
++ ALT + N: Navigate to Youtube tab and select search bar
++ ALT + S: Switch between player tab and last navigated tab
 
-
-# Feature brainstorm
-1- Played video history
+# Version
+1.0

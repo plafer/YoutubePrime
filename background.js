@@ -44,7 +44,14 @@ chrome.tabs.onActivated.addListener(function ( activeInfo ) {
 
 chrome.runtime.onInstalled.addListener(function () {
     playerTabAction( function ( tab ) {
-        saveLastVisitedTab(tab.id);
+        chrome.tabs.query({
+            windowId: tab.windowId,
+            active: true
+        }, function ( tabs ) {
+            if (tabs[0]) {
+                saveLastVisitedTab(tabs[0].id);
+            }
+        });
         chrome.tabs.reload(tab.id);
     });
 });

@@ -1,12 +1,15 @@
 {
     "manifest_version": 2,
     "name": "Light Player",
-    "version": "0.1",
+    "version": "1.0",
     "minimum_chrome_version": "23",
-    "description": "Removing the friction of using Youtube as a music player.",
+    "description": "Removing the friction with using Youtube as a music player.",
     "author": "Philippe Laferriere",
+    "icons": {
+        "128": "icon.png"
+    },
     "browser_action": {
-        "default_title": "Light Player",
+        "default_title": "Shortcuts",
         "default_icon": "icon.png",
         "default_popup": "browser_action.html"
     },
